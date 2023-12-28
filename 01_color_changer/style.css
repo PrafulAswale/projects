@@ -1,0 +1,27 @@
+html {
+  margin: 0;
+}
+.canvas {
+  margin: 100px auto 100px;
+  width: 80%;
+  text-align: center;
+}
+.div-dim {
+  width: 100px;
+  height: 100px;
+  border: solid black 1px;
+  border-radius: 25px;
+  display: inline-block;
+}
+#bg-blue {
+  background-color: #0093e9;
+}
+#bg-orange {
+  background-color: #ff763b;
+}
+#bg-pink {
+  background-color: #ff6a88;
+}
+#bg-green {
+  background-color: #3ff44b;
+ }

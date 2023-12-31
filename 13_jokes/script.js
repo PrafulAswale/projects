@@ -10,7 +10,7 @@ function getNewJoke() {
     //   console.log(xhr.readyState);
     if (xhr.readyState === 4) {
       const data = JSON.parse(this.responseText);
-      console.log(data.value);
+      //   console.log(data.value);
       displayJokes.innerText = data.value;
     }
   };
@@ -18,5 +18,6 @@ function getNewJoke() {
 }
 
 newJoke.addEventListener("click", () => {
+  displayJokes.innerText = "Getting new Joke.....";
   getNewJoke();
 });

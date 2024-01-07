@@ -13,9 +13,10 @@ function addBook() {
     author: author.value,
     year: year.value,
   };
-  if (localStorage.getItem("booksInfo").length > 0) {
-    booksInfo = [...JSON.parse(localStorage.getItem("booksInfo"))];
-  }
+
+  booksInfo = [...JSON.parse(localStorage.getItem("booksInfo"))];
+  // if (localStorage.getItem("booksInfo").length > 0) {
+  // }
   booksInfo.push(book);
   localStorage.setItem("booksInfo", JSON.stringify(booksInfo));
 

@@ -14,15 +14,15 @@ function addBook() {
     year: year.value,
   };
 
-  booksInfo = [...JSON.parse(localStorage.getItem("booksInfo"))];
-  // if (localStorage.getItem("booksInfo").length > 0) {
-  // }
+  if (
+    localStorage.getItem("booksInfo") &&
+    localStorage.getItem("booksInfo").length > 0
+  ) {
+    booksInfo = [...JSON.parse(localStorage.getItem("booksInfo"))];
+  }
   booksInfo.push(book);
   localStorage.setItem("booksInfo", JSON.stringify(booksInfo));
 
-  title.innerText = "";
-  author.innerText = "";
-  year.innerText = "";
   displayBook();
 }
 
@@ -30,7 +30,6 @@ function addBook() {
 function displayBook() {
   bookList.innerHTML = "";
   let books = JSON.parse(localStorage.getItem("booksInfo"));
-  console.log(typeof books[0].title);
   for (let i = 0; i < books.length; i++) {
     let sec = document.createElement("section");
     let div1 = document.createElement("div");
@@ -62,7 +61,7 @@ function deleteBook(title) {
   localStorage.setItem("booksInfo", JSON.stringify(books));
   displayBook();
 }
-if (localStorage.getItem("booksInfo").length > 0) displayBook();
+if (localStorage.getItem("booksInfo")) displayBook();
 btn.addEventListener("click", function (e) {
   //work on CRUD operation of DOM
   e.preventDefault();

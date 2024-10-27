@@ -8,7 +8,7 @@ submit.addEventListener("submit", (e) => {
   const Body = document.getElementById("body").value;
   // console.log(To, From, Subject, Body);
   Email.send({
-    SecureToken: "cd0dee10-b0f1-42b3-9588-0effb1bd2551", //add your token here
+    SecureToken: "", //add your token here
     To: To,
     From: From,
     Subject: Subject,

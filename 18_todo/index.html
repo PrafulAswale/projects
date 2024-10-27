@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="todo-section">
+            <h1 class="title">Manage Your Todos</h1>
+            <form action="">
+                <input type="text" name="task" id="task" placeholder="Write todo">
+                <button id="add">Add</button>
+            </form>
+
+            <div class="tasks">
+                <div style="width: 100%;">
+                    <div class="task" style="background-color: #c6e9a7;">
+                        <input type="checkbox" id="1" style="cursor: pointer;" checked="unchecked">
+                        <input type="text" value="Practice DSA" class="msg" readonly>
+                        <button class="edit">✏️</button>
+                        <button class="delete" id="165841" onclick="(e)=> console.log(e.id)"> ❌</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js" defer></script>
+
+</body>
+
+</html>
